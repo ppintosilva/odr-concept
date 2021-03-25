@@ -37,3 +37,7 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# data
+data/00-raw-data.csv
+data/00-anonymisation-table.csv
