@@ -29,7 +29,7 @@ data_wrangled <-
       ) %>%
       mutate(domain = "Agility"),
     raw_data_anonymised %>%
-      select(id,methodology:int_notes) %>%
+      select(id,instance,methodology:int_notes) %>%
       pivot_longer(
         cols = c(methodology:int_notes),
         names_to = "question",

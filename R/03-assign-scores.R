@@ -164,6 +164,6 @@ data_scores <-
     answer_scores %>% select(question, answer, score),
     by = c("question", "answer")
   ) %>%
-  select(id, sector, size, i, domain, j, question, answer, score)
+  select(id, instance, sector, size, i, domain, j, question, answer, score)
 
 write_rds(data_scores, "data/03-data-scores.rds")

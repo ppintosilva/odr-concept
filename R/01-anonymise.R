@@ -54,8 +54,8 @@ anonymisation_table <-
 
 raw_data_anonymised <-
   raw_data %>%
-  inner_join(anonymisation_table) %>%
+  inner_join(anonymisation_table, by = "organisation") %>%
   select(-c(t,interviewee,organisation,sector,size)) %>%
-  select(id, everything())
+  select(id, instance, everything())
 
 write_rds(raw_data_anonymised, "data/01-raw-data-anonymised.rds")
