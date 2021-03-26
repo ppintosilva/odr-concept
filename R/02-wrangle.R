@@ -13,7 +13,8 @@ org_info <- tribble(
   "F", "Healthcare", 4,
   "G", "Housing", 4,
   "H", "Consumer electronics", 4,
-  "I", "Energy storage", 2
+  "I", "Energy storage", 2,
+  "J", "Manufacturing", 4
 ) %>%
   mutate(size = factor(size, levels = size_levels, labels = size_labels)) %>%
   mutate(sector = factor(sector))

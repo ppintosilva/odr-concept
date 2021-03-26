@@ -36,7 +36,7 @@ col_names <- c(
 )
 
 raw_data <- read_csv(
-  file = "data/00-raw_data.csv",
+  file = "data/00-raw-data.csv",
   col_names = col_names,
   col_types = cols(
     .default = col_character()

@@ -86,6 +86,7 @@ answer_scores <-  tibble::tribble(
   1L, 11L,               "testing",                                            "Do not build software (hence do not test)",      NA,
   1L, 11L,               "testing",                                                                              "Testing",      NA,
   1L, 11L,               "testing",                                                                              "Lacking",      0/5,
+  1L, 11L,               "testing",                                                                           "Outsourced",      1/5,
   1L, 11L,               "testing",                        "No checking for expected data properties (amount of data/day)",      1/5,
   1L, 11L,               "testing",                                                                    "Integration tests",      4/5,
   #
@@ -110,6 +111,7 @@ answer_scores <-  tibble::tribble(
   2L, 16L,           "methodology",                                          "Dont know what a model is or what they want",      0/8,
   2L, 16L,           "methodology",                            "Skills barrier (know what they want but not how to do it)",      1/8,
   2L, 16L,           "methodology",                                      "Try to build complicated models from the get go",      2/8,
+  2L, 16L,      "methodology", "Clear business questions but they dont necessarily know what models would be the best fit",      2/8,
   2L, 16L,           "methodology",                                                              "Descriptive/Explorative",      3/8,
   2L, 16L,           "methodology",                     "Start with simple models and progress to more complicated models",      7/8,
 
