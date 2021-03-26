@@ -4,12 +4,6 @@ data_scores <- read_rds("data/03-data-scores.rds")
 # Some questions were answered with less confidence than others, and should be weighted accordingly.
 #
 
-data_scores %>%
-  filter(question == "agility_notes")
-
-data_scores %>%
-  filter(question == "int_notes")
-
 answers_tally <-
   data_scores %>%
   filter(!question %in% c("agility_notes", "int_notes"))  %>%
@@ -74,11 +68,6 @@ data_weights <-
   group_by(id,instance,domain) %>%
   mutate(weight = softmax(confidence)) %>%
   mutate(weighted_score = score * weight)
-
-# check that non-na scores have not been included in softmax computation
-data_weights %>%
-  filter(id == "B") %>%
-  print(n=50)
 
 # sanity check: is the sum of all weights, for non-NA scores, per org per domain, equal to 1?
 data_weights %>%
